@@ -231,7 +231,7 @@ nav {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    min-height: 50vh; 
+    min-height: 70vh; 
 }
 
 /* About Section */
@@ -283,5 +283,54 @@ nav {
     .about-side {
         width: 100%;
         height: auto;
+    }
+}
+
+/* Services grid for larger screens */
+.services-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 0;
+    border: 1px solid gray;
+    height: 50vh;
+}
+
+.grid-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid gray;
+    padding: 20px;
+}
+
+.services-container .grid-item:nth-child(1) {
+    background-color: var(--accent); 
+}
+
+.services-container .grid-item:nth-child(2) {
+    background-color: var(--primary);
+}
+
+.services-container .grid-item:nth-child(3) {
+    background-color: var(--secondary);
+}
+
+.services-container .grid-item:nth-child(4) {
+    background-color: var(--primary); 
+}
+
+.services-container .grid-item:nth-child(5) {
+    background-color: var(--secondary); 
+}
+
+.services-container .grid-item:nth-child(6) {
+    background-color: var(--primary); 
+}
+
+/* Media query for smaller screens */
+@media screen and (max-width: 768px) {
+    .services-container {
+        grid-template-columns: 1fr; 
+        height: auto; 
     }
 }
