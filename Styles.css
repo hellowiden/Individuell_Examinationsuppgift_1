@@ -32,7 +32,7 @@ html {
     --background: #fdfcfc;
     --primary: #909798;
     --secondary: #cacbce;
-    --accent: #ff42cd;
+    --accent: #e9ff42;
 }
 
 /* Dark Theme */
@@ -41,7 +41,7 @@ html {
     --background: #030202;
     --primary: #676e6f;
     --secondary: #313235;
-    --accent: #ff42cd;
+    --accent: #e9ff42;
 }
 
 /* Global Styles */
@@ -115,10 +115,106 @@ p {
 
 /*-----------------------------------------------ALL MAIN CODE STARTS BELOW-----------------------------------------------------------*/
 
-/* Hero section */
-.hero {
-    background-color: var(--accent);
-    padding: 100px 50px;
-    text-align: center;
+/* News Ticker */
+.news-container {
+    display: flex;
+    align-items: center;
+    height: auto;
+    font-family: var(--ff-Main);
+    overflow: hidden;
 }
 
+.news-container .title {
+    background: var(--accent);
+    padding: 5px 10px;
+    font-weight: bold;
+    z-index: 200;
+}
+
+.news-container ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    animation: scroll 25s linear infinite;
+}
+
+.news-container ul li {
+    white-space: nowrap;
+    padding: 0 20px;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.news-container ul li::after {
+    content: "";
+    width: 1px;
+    height: 100%;
+    background: var(--primary);
+    position: absolute;
+    top: 10%;
+    right: 0;
+}
+
+.news-container ul li:last-child::after {
+    display: none;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+/*NAVBAR*/
+
+ul.menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.logo {
+    font-size: var(--h5-font-size);
+    font-weight: bold;
+    margin-right: 20px;
+}
+
+.item {
+    margin-right: 20px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Hero section */
+.hero {
+    background-color: var(--secondary);
+    padding: 100px 50px;
+    text-align: center;
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center; 
+    height: 50vh;
+}
