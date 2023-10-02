@@ -334,3 +334,20 @@ nav {
         height: auto; 
     }
 }
+
+/*Contact section */
+
+.contact {
+    height: 30vh;
+}
+
+.map {
+    position: relative;
+    overflow: hidden;
+    height: auto;
+}
+
+.map iframe {
+    width: 100%;
+    z-index: 1;
+}
