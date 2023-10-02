@@ -27,8 +27,10 @@ html {
     scroll-behavior: smooth;
 }
 
-/* Light Theme */
+/* Theme Styles */
+
 :root[data-theme="light"] {
+    /* Light Theme */
     --text: #080707;
     --background: #ededed;
     --primary: #909798;
@@ -36,8 +38,8 @@ html {
     --accent: #fff242;
 }
 
-/* Dark Theme */
 :root[data-theme="dark"] {
+    /* Dark Theme */
     --text: #f8f7f7;
     --background: #030202;
     --primary: #676e6f;
@@ -55,7 +57,6 @@ html {
 }
 
 body {
-
     height: 100vh;
 }
 
@@ -158,7 +159,6 @@ p {
 
 .news-container ul li::after {
     content: "";
-    width: 1px;
     height: 100%;
     background: var(--primary);
     position: absolute;
@@ -180,8 +180,7 @@ p {
     }
 }
 
-/*NAVBAR*/
-
+/* Navbar */
 ul.menu {
     list-style: none;
     padding: 0;
@@ -217,13 +216,14 @@ nav {
     font-size: var(--p-font-size);
     text-decoration: none;
     color: inherit;
+    transition: font-weight 0.3s ease; 
 }
 
 .menu a:hover {
     font-weight: 500;
 }
 
-/* Hero section */
+/* Hero Section */
 .hero {
     background-color: var(--accent);
     text-align: center;
@@ -234,24 +234,29 @@ nav {
     min-height: 50vh; 
 }
 
-/* About section */
+/* About Section */
 .about {
+    display: flex;
     text-align: center;
-    height: auto;
-    padding: 20px;
+    min-height: 50vh;
+    justify-content: center;
+    align-items: center;
 }
 
 .about-grid {
     display: grid;
     grid-template-columns: 1fr auto;
-    gap: 20px; 
-    width: 1000px; 
+    gap: 50px;
     margin: 0 auto;
-    padding: 20px;
 }
 
 .about-copy {
     text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    padding: 50px;
 }
 
 .about-side {
@@ -259,25 +264,24 @@ nav {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: var(--accent);
+    background-color: var(--primary);
     padding: 20px;
+    width: 33vw;
+    height: 50vh;
 }
 
-/* Media query for smaller screens - switch to a row layout */
+/* Media Query for Smaller Screens */
 @media (max-width: 768px) {
     .about-grid {
-        grid-template-columns: 1fr; 
-        width: 100%; 
+        grid-template-columns: 1fr;
     }
 
     .about-copy {
-        padding-right: 0; 
-        text-align: center; 
+        order: 1;
     }
 
     .about-side {
-        order: -1; 
-        margin-top: 20px; 
-        text-align: center; 
+        width: 100%;
+        height: auto;
     }
 }
