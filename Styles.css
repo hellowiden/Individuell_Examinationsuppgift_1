@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400;1,500&display=swap');
+
+:root[data-theme="light"] {
+    --text: #080707;
+    --background: #fdfcfc;
+    --primary: #909798;
+    --secondary: #cacbce;
+    --accent: #626a67;
+}
+
+:root[data-theme="dark"] {
+    --text: #f8f7f7;
+    --background: #030202;
+    --primary: #676e6f;
+    --secondary: #313235;
+    --accent: #959d9a;
+}
+ 
+:root {
+    --ff-Primary: 'Barlow Condensed', sans-serif;
+    --ff-Secondary: 'Montserrat', sans-serif;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    color-scheme: light dark;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+h1{
+    font-family: var(--ff-Primary);
+    color: var(--primary);
+}
+
+p{
+    font-family: var(--ff-Secondary);
+    color: var(--secondary);
+}
