@@ -47,7 +47,7 @@ html {
 /* CSS for 3-column grid layout */
 body {
     display: grid;
-    grid-template-columns: 1fr 3fr 1fr; 
+    grid-template-columns: 0.5fr 3fr 0.5fr; 
 }
 
 main {
@@ -64,7 +64,6 @@ h1 {
     font-family: var(--ff-Main);
     font-size: var(--step-3);
     font-weight: 900; 
-    line-height: 1.5;
     color: var(--text);
 }
 
@@ -178,7 +177,7 @@ nav {
 .about {
     display: flex;
     text-align: center;
-    min-height: 50vh;
+    height: inherit;
     justify-content: center;
     align-items: center;
 }
@@ -251,23 +250,33 @@ nav {
 }
 
 .services-container .grid-item:nth-child(2) {
-    background-color: var(--primary);
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('Assets/374.jpg');
+    background-size: cover;
+    color: var(--secondary);
 }
 
 .services-container .grid-item:nth-child(3) {
-    background-color: var(--secondary);
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('Assets/244.jpg');
+    background-size: cover;
+    color: var(--secondary);
 }
 
 .services-container .grid-item:nth-child(4) {
-    background-color: var(--primary); 
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('Assets/529.jpg');
+    background-size: cover;
+    color: var(--secondary);
 }
 
 .services-container .grid-item:nth-child(5) {
-    background-color: var(--secondary); 
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('Assets/260.jpg');
+    background-size: cover;
+    color: var(--secondary);
 }
 
 .services-container .grid-item:nth-child(6) {
-    background-color: var(--primary); 
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('Assets/467.jpg');
+    background-size: cover;
+    color: var(--secondary);
 }
 
 /* Media query for smaller screens */
@@ -278,19 +287,56 @@ nav {
     }
 }
 
-/*Contact section */
-
+/* Contact Section */
 .contact {
-    height: 30vh;
+    display: flex;
+    text-align: center;
+    height: 50vh;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--secondary);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: auto;
+}
+
+.contact-copy {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    padding: 50px;
+    height: 100%;
+}
+
+.contact-map {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    order: 2;
+    height: 100%;
 }
 
 .map {
-    position: relative;
-    overflow: hidden;
-    height: auto;
+    width: 100%;
+    height: 100%;
 }
 
-.map iframe {
-    width: 100%;
-    z-index: 1;
+/* Media Query for Smaller Screens */
+@media (max-width: 768px) {
+    .contact {
+        grid-template-columns: 1fr;
+    }
+}
+
+/*Footer*/
+
+footer {
+    display: grid;
+    grid-column: 2; 
+    background-color: var(--accent); 
+    padding: 10px 0; 
+    text-align: center; 
 }
