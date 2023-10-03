@@ -30,7 +30,6 @@ html {
 
 :root[data-theme="light"] {
     /* Light Theme */
-    --text: #080707;
     --background: #ededed;
     --primary: #909798;
     --secondary: #f3f3f3;
@@ -39,7 +38,6 @@ html {
 
 :root[data-theme="dark"] {
     /* Dark Theme */
-    --text: #f8f7f7;
     --background: #030202;
     --primary: #676e6f;
     --secondary: #313235;
@@ -67,6 +65,7 @@ h1 {
     font-size: var(--step-3);
     font-weight: 900; 
     line-height: 1.5;
+    color: var(--text);
 }
 
 h2 {
@@ -74,6 +73,7 @@ h2 {
     font-size: var(--step-2);
     font-weight: 600; 
     line-height: 1.5;
+    color: var(--text);
 }
 
 h3 {
@@ -81,6 +81,7 @@ h3 {
     font-size: var(--step-1);
     font-weight: 500; 
     line-height: 1.5;
+    color: var(--text);
 }
 
 h4 {
@@ -88,6 +89,7 @@ h4 {
     font-size: var(--step-0);
     font-weight: 400; 
     line-height: 1.5;
+    color: var(--text);
 }
 
 h5 {
@@ -95,6 +97,7 @@ h5 {
     font-size: var(--step--1);
     font-weight: 400; 
     line-height: 1.5;
+    color: var(--text);
 }
 
 h6 {
@@ -102,6 +105,7 @@ h6 {
     font-size: var(--step--2);
     font-weight: 400;
     line-height: 1.5;
+    color: var(--text);
 }
 
 p {
@@ -109,6 +113,7 @@ p {
     font-size: var(--step--2);
     font-weight: 400;
     line-height: 1.5;
+    color: var(--text);
 }
 
 /*-----------------------------------------------ALL MAIN CODE STARTS BELOW-----------------------------------------------------------*/
@@ -125,6 +130,7 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background-color: var(--secondary);
 }
 
 .menu {
@@ -138,6 +144,7 @@ nav {
     font-size: var(--h5-font-size);
     font-weight: bold;
     margin-right: 20px;
+    color: var(--text);
 }
 
 .item {
@@ -189,32 +196,25 @@ nav {
     justify-content: center;
     align-items: left;
     padding: 50px;
+    background-color: var(--secondary);
 }
 
 .about-side {
-    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 300px;
     height: 200px;
-    background-image: url('Assets/521.jpg');
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('Assets/521.jpg');
     background-size: cover;
     padding: 20px;
     width: 33.33vw;
     height: 100%;
+    color: var(--secondary);
 }
 
-.about-side::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); 
-}
+
 
 /* Media Query for Smaller Screens */
 @media (max-width: 768px) {
