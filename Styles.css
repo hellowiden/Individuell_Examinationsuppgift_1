@@ -212,8 +212,6 @@ nav {
     height: 100%;
 }
 
-
-
 /* Media Query for Smaller Screens */
 @media (max-width: 768px) {
     .about-grid {
@@ -229,7 +227,8 @@ nav {
     }
 }
 
-/* Services grid for larger screens */
+/*Services section*/
+
 .services-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -248,37 +247,17 @@ nav {
     background-color: var(--accent); 
 }
 
-.services-container .grid-item:nth-child(2) {
+.services-container .grid-item:nth-child(2),
+.services-container .grid-item:nth-child(3),
+.services-container .grid-item:nth-child(4),
+.services-container .grid-item:nth-child(5),
+.services-container .grid-item:nth-child(6) {
     background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('Assets/374.jpg');
     background-size: cover;
     color: var(--secondary);
 }
 
-.services-container .grid-item:nth-child(3) {
-    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('Assets/244.jpg');
-    background-size: cover;
-    color: var(--secondary);
-}
-
-.services-container .grid-item:nth-child(4) {
-    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('Assets/529.jpg');
-    background-size: cover;
-    color: var(--secondary);
-}
-
-.services-container .grid-item:nth-child(5) {
-    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('Assets/260.jpg');
-    background-size: cover;
-    color: var(--secondary);
-}
-
-.services-container .grid-item:nth-child(6) {
-    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('Assets/467.jpg');
-    background-size: cover;
-    color: var(--secondary);
-}
-
-/* Media query for smaller screens */
+/* Media query for Services section*/
 @media screen and (max-width: 768px) {
     .services-container {
         grid-template-columns: 1fr; 
@@ -330,8 +309,7 @@ nav {
     }
 }
 
-/*Footer*/
-
+/* Footer */
 footer {
     display: grid;
     grid-column: 2; 
