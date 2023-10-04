@@ -30,19 +30,20 @@ html {
 
 :root[data-theme="light"] {
     /* Light Theme */
-    --background: #f0f0f0;
+    --background: #FFFFFF; 
     --primary: #333333; 
-    --secondary: #d4d4d4;
-    --accent: #ffc107; 
+    --secondary: #EFEFEF; 
+    --accent: #ffee33; 
 }
 
 :root[data-theme="dark"] {
     /* Dark Theme */
-    --background: #121212; 
-    --primary: #d1d1d1; 
-    --secondary: #262626; 
-    --accent: #ffc107; 
+    --background: #333333; 
+    --primary: #FFFFFF;
+    --secondary: #555555; 
+    --accent: #00a2ff; 
 }
+
 
 
 /* CSS for 3-column grid layout */
@@ -211,7 +212,7 @@ nav {
     align-items: center;
     width: 300px;
     height: 200px;
-    background-color: var(--primary);
+    background-color: var(--background);
     background-size: cover;
     padding: 20px;
     width: 33.33vw;
