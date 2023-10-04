@@ -30,19 +30,20 @@ html {
 
 :root[data-theme="light"] {
     /* Light Theme */
-    --background: #ededed;
-    --primary: #909798;
-    --secondary: #f3f3f3;
-    --accent: #fff242;
+    --background: #f0f0f0;
+    --primary: #333333; 
+    --secondary: #d4d4d4;
+    --accent: #ffc107; 
 }
 
 :root[data-theme="dark"] {
     /* Dark Theme */
-    --background: #030202;
-    --primary: #676e6f;
-    --secondary: #313235;
-    --accent: #fff242;
+    --background: #121212; 
+    --primary: #d1d1d1; 
+    --secondary: #262626; 
+    --accent: #ffc107; 
 }
+
 
 /* CSS for 3-column grid layout */
 body {
