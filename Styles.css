@@ -144,6 +144,9 @@ ul.menu {
 }
 
 nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
     padding: 20px;
     display: flex;
     justify-content: space-between;
@@ -151,6 +154,7 @@ nav {
     background-color: #f8f8f8; 
     color: #333; 
 }
+
 
 .menu {
     display: flex;
