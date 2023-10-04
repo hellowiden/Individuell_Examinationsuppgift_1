@@ -77,7 +77,6 @@ img:hover {
     filter: none; 
 }
 
-
 /* Typography Styles with Adjusted Fluid Type Scale */
 h1 {
     font-family: var(--ff-Main);
@@ -95,7 +94,7 @@ h2 {
 }
 
 h3 {
-    font-family: var(--ff-Main);
+    font-family: var(--ff-Main); 
     font-size: var(--step-1);
     font-weight: 500; 
     line-height: 1.5;
