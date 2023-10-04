@@ -30,21 +30,31 @@ html {
 
 :root[data-theme="light"] {
     /* Light Theme */
-    --background: #FFFFFF; 
-    --primary: #333333; 
-    --secondary: #EFEFEF; 
-    --accent: #ffee33; 
+    --text-color-light: #2c2c2c;
+    --background-color-light: #fafafa;
+    --primary-accent-light: #ffcc00; /* Yellow color */
+    --secondary-accent-light: #ffea00; /* Yellow color */
+    --tertiary-accent-light: #ffd700; /* Yellow color */
+  
+    /* Background Variations for Light Theme */
+    --background-1-light: #a3a3a3;
+    --background-2-light: #262626;
+    --background-3-light: #282828;
 }
 
 :root[data-theme="dark"] {
     /* Dark Theme */
-    --background: #333333; 
-    --primary: #FFFFFF;
-    --secondary: #555555; 
-    --accent: #00a2ff; 
+    --text-color-dark: #fafafa;
+    --background-color-dark: #2c2c2c;
+    --primary-accent-light: #ffcc00; /* Yellow color */
+    --secondary-accent-light: #ffea00; /* Yellow color */
+    --tertiary-accent-light: #ffd700; /* Yellow color */
+  
+    /* Background Variations for Dark Theme */
+    --background-4-dark: #5c5c5c;
+    --background-5-dark: #797979;
+    --background-6-dark: #d7d7d7;
 }
-
-
 
 /* CSS for 3-column grid layout */
 body {
@@ -60,11 +70,13 @@ img {
     max-width: 100%;
     display: block;
     filter: grayscale(100%);
+    transition: filter 0.3s ease; 
 }
 
-img:active{
-    filter: none;
+img:hover {
+    filter: none; 
 }
+
 
 /* Typography Styles with Adjusted Fluid Type Scale */
 h1 {
@@ -118,7 +130,7 @@ p {
     font-family: var(--ff-Main);
     font-size: var(--step--2);
     font-weight: 400;
-    line-height: 1.5;
+    line-height: 2;
     color: var(--text);
 }
 
@@ -136,7 +148,9 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: var(--secondary);
+    background-color: var(--background-2-light);
+    color: var(--background-color-light);
+
 }
 
 .menu {
@@ -150,7 +164,6 @@ nav {
     font-size: var(--h5-font-size);
     font-weight: bold;
     margin-right: 20px;
-    color: var(--text);
 }
 
 .item {
@@ -159,9 +172,9 @@ nav {
 
 .menu a {
     font-family: var(--ff-Main);
-    font-size: var(--p-font-size);
-    text-decoration: none;
-    color: inherit;
+    font-size: var(--step--2);
+    text-decoration: none; 
+    color: var(--background-color-dark);
     transition: font-weight 0.3s ease; 
 }
 
@@ -171,7 +184,7 @@ nav {
 
 /* Hero Section */
 .hero {
-    background-color: var(--accent);
+    background-color: var(--primary-accent-light); 
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -202,7 +215,8 @@ nav {
     justify-content: center;
     align-items: left;
     padding: 50px;
-    background-color: var(--secondary);
+    background-color: var(--background-color-light);
+    color: var(--background-2-light);
 }
 
 .about-side {
@@ -212,7 +226,8 @@ nav {
     align-items: center;
     width: 300px;
     height: 200px;
-    background-color: var(--background);
+    background-color: var(--background-2-light);
+    color: var(--background-color-light);
     background-size: cover;
     padding: 20px;
     width: 33.33vw;
@@ -251,17 +266,38 @@ nav {
 }
 
 .services-container .grid-item:nth-child(1) {
-    background-color: var(--accent); 
+    background-color: var(--background-2-light);
+    color: var(--background-color-light);
 }
 
-.services-container .grid-item:nth-child(2),
-.services-container .grid-item:nth-child(3),
-.services-container .grid-item:nth-child(4),
-.services-container .grid-item:nth-child(5),
-.services-container .grid-item:nth-child(6) {
+.services-container .grid-item:nth-child(2) {
     background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('Assets/374.jpg');
     background-size: cover;
-    color: var(--secondary);
+    color: #fafafa; 
+}
+
+.services-container .grid-item:nth-child(3) {
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('Assets/244.jpg');
+    background-size: cover;
+    color: #fafafa; 
+}
+
+.services-container .grid-item:nth-child(4) {
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('Assets/260.jpg');
+    background-size: cover;
+    color: #fafafa; 
+}
+
+.services-container .grid-item:nth-child(5) {
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('Assets/467.jpg');
+    background-size: cover;
+    color: #fafafa; 
+}
+
+.services-container .grid-item:nth-child(6) {
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('Assets/529.jpg');
+    background-size: cover;
+    color: #fafafa; 
 }
 
 /* Media query for Services section*/
@@ -279,7 +315,8 @@ nav {
     height: 50vh;
     justify-content: center;
     align-items: center;
-    background-color: var(--secondary);
+    background-color: var(--background-2-light);
+    color: var(--background-color-light);
     display: grid;
     grid-template-columns: 1fr 1fr;
     margin: auto;
@@ -320,7 +357,7 @@ nav {
 footer {
     display: grid;
     grid-column: 2; 
-    background-color: var(--accent); 
+    background-color: var(--primary-accent-light); 
     padding: 10px 0; 
     text-align: center; 
 }
