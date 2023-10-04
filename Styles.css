@@ -136,7 +136,8 @@ p {
 
 /*-----------------------------------------------ALL MAIN CODE STARTS BELOW-----------------------------------------------------------*/
 
-/* Navbar */
+/* Navbar styles */
+
 ul.menu {
     list-style: none;
     padding: 0;
@@ -148,19 +149,17 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: var(--background-2-light);
-    color: var(--background-color-light);
+    background-color: #f8f8f8; 
+    color: #333; 
 }
 
 .menu {
     display: flex;
-    justify-content: flex-end;
     align-items: center;
 }
 
 .logo {
-    font-family: var(--ff-Main);
-    font-size: var(--h5-font-size);
+    font-size: 24px;
     font-weight: bold;
     margin-right: 20px;
 }
@@ -171,12 +170,15 @@ nav {
 
 .menu a {
     font-family: var(--ff-Main);
-    font-size: var(--step--2);
     text-decoration: none;
-    color: var(--background-color-dark);
-    transition: font-weight 0.3s ease;
-
+    color: #333; 
+    transition: color 0.3s ease;
 }
+
+.menu a:hover {
+    color: var(--primary-accent-light); 
+}
+
 
 /* Hero Section */
 .hero {
