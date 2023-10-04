@@ -150,7 +150,6 @@ nav {
     align-items: center;
     background-color: var(--background-2-light);
     color: var(--background-color-light);
-
 }
 
 .menu {
@@ -173,13 +172,10 @@ nav {
 .menu a {
     font-family: var(--ff-Main);
     font-size: var(--step--2);
-    text-decoration: none; 
+    text-decoration: none;
     color: var(--background-color-dark);
-    transition: font-weight 0.3s ease; 
-}
+    transition: font-weight 0.3s ease;
 
-.menu a:hover {
-    font-weight: 500;
 }
 
 /* Hero Section */
