@@ -185,6 +185,44 @@ nav {
     color: var(--primary-accent-light); 
 }
 
+/* Navbar styles */
+/* Add styles for hamburger menu icon */
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    margin: 3px 0;
+}
+
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
+    .menu {
+        display: none;
+    }
+    .menu.activate {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: #f8f8f8;
+        width: 100%;
+        text-align: center;
+        padding: 10px;
+        z-index: 1;
+    }
+}
+
+
 /* Hero Section */
 .hero {
     background-color: var(--primary-accent-light); 
