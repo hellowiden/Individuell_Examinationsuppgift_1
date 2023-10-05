@@ -151,10 +151,9 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #f8f8f8; 
-    color: #333; 
-}
-
+    background-color: #f8f8f8;
+    color: #333;
+  }
 
 .menu {
     display: flex;
@@ -181,7 +180,6 @@ nav {
 .menu a:hover {
     color: var(--primary-accent-light); 
 }
-
 
 /* Hero Section */
 .hero {
