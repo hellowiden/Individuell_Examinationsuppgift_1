@@ -207,7 +207,7 @@ nav {
 
 .about-grid {
     display: grid;
-    grid-template-columns: 1fr auto;
+    grid-template-columns: 1fr 1fr;
     margin: auto;
 }
 
@@ -230,9 +230,9 @@ nav {
     background-color: var(--background-2-light);
     color: var(--background-color-light);
     padding: 20px;
-    width: 33.33vw;
     height: 100%;
 }
+
 
 /* Media Query for Smaller Screens */
 @media (max-width: 768px) {
