@@ -206,10 +206,11 @@ nav {
         position: absolute;
         top: 60px;
         left: 0;
-        background-color: #f8f8f8;
+        background-color: #e5e5e5;
         width: 100%;
         text-align: center;
-        padding: 10px;
+        padding: 20px 0 ;
+        gap: 20px;
         z-index: 1;
     }
 }
