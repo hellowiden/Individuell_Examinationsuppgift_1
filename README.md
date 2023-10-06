@@ -1,7 +1,7 @@
 # Individuell_Examinationsuppgift_1
 Skapad av Marcus Widén
 
-Syftet med projektet var att utveckla mina kunskaper inom användarvänlighet för alla med någon form av funktionsvariation. 
+Syftet med projektet var att skapa en responsiv sida med hjlp av HTML och CSS. Med denna uppgiften ville jag änev utveckla mina kunskaper inom användarvänlighet, för alla med någon form av funktionsvariation. 
 
 Det område som har legat i störst fokus är typografin, med dynamisk typsnitt genom clamp-metoden, då typografi anses vara något som påverkar användarvänligheten avsevärt. Clamp-metoden innebär alltså att typsnittet automatiskt ändrar sin storlek efter displayn. Även färgerna har gjorts dynamiska och dessa justeras baserat på om användaren har ett ljust eller mörkt systemtema.
 
